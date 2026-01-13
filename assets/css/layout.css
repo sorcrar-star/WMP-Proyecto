@@ -1,0 +1,287 @@
+/* ======================================================
+   LAYOUT GENERAL
+   Proyecto: WMP
+   Archivo: layout.css
+   Objetivo: Estructura global y organización visual
+   ====================================================== */
+
+/* ================= CONTENEDORES ================= */
+.header__container,
+.hero__container,
+.content__container,
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* ================= HEADER ================= */
+.header {
+  background-color: #0a2540; /* Azul profundo elegante */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 24px; /* zona de transición visual */
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 37, 64, 1),
+    rgba(10, 37, 64, 0)
+  );
+  pointer-events: none;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px; /* más aire */
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+}
+
+.header__logo {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+/* ================= NAVEGACIÓN ================= */
+.nav {
+  margin-left: auto; /* Empuja el menú totalmente a la derecha */
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.nav__link {
+  position: relative;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-xs) 0;
+  transition: color var(--transition-fast);
+}
+
+/* Hover elegante tipo Apple */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-normal);
+}
+
+.nav__link:hover {
+  color: var(--color-accent);
+}
+
+.nav__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav__link:focus-visible {
+  outline: none;
+}
+
+.nav__link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ================= MAIN ================= */
+main {
+  min-height: calc(100vh - 144px); /* header + footer */
+}
+
+/* ================= CONTENIDO PRINCIPAL ================= */
+.content {
+  background-color: #050b16;
+  padding-top: var(--space-xxl);
+  padding-bottom: var(--space-xxl);
+}
+
+.content__container {
+  display: grid;
+  gap: var(--space-xxl);
+}
+
+.content__section {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.content__header {
+  max-width: 640px;
+}
+
+.content__title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: var(--space-sm);
+}
+
+.content__description {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+}
+
+.content__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+@media (max-width: 900px) {
+  .content__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= SECCIONES ================= */
+.hero {
+  position: relative;
+  display: block;
+  padding-top: calc(var(--space-xxl) + 72px);
+  padding-bottom: calc(var(--space-xxl) + 32px);
+  /* Fondo más oscuro y descansado para la vista */
+  background:
+    radial-gradient(1200px 420px at top center, rgba(255,255,255,0.025), transparent 70%),
+    linear-gradient(180deg, #050b16 0%, #070f1d 40%, #081226 100%);
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: var(--space-xxl);
+  align-items: stretch; /* evita sensación de choque vertical */
+}
+
+/* Contenido principal del hero (sin tarjeta) */
+.hero__card--primary {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title {
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__description {
+  max-width: 560px;
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+/* Acciones del hero */
+.hero__actions {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+/* Contenedor de tarjetas secundarias */
+.hero__features {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: 32px; /* separa visualmente del header */
+  margin-bottom: 64px; /* NUEVO: aire inferior para que la última tarjeta no choque */
+}
+
+/* Espacio extra para que la primera tarjeta no choque con el header */
+.hero__features > :first-child {
+  margin-top: 24px;
+}
+
+.hero__features > * {
+  align-self: stretch;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding-top: calc(var(--space-xxl) + 48px);
+  }
+
+  .hero__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__container {
+  text-align: center;
+  padding: var(--space-lg);
+  font-size: var(--font-size-sm);
+}
+
+/* ================= GRID BASE ================= */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+    height: auto;
+    padding: var(--space-md);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+ 
+
+
+

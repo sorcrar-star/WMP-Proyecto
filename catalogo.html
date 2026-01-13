@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo | Proyecto WMP</title>
+
+  <!-- CSS base -->
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" data-js="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">WMP</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Inicio</a></li>
+          <li><a href="catalogo.html" class="nav__link is-active">Catálogo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main id="main-content" role="main">
+
+    <!-- ===== HERO CATÁLOGO ===== -->
+    <section class="section section--tight catalog-hero">
+      <div class="container">
+        <h1 class="catalog-hero__title">Nuestro catálogo</h1>
+        <p class="catalog-hero__description">
+          Soluciones de pago diseñadas para adaptarse a tu negocio.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN CATÁLOGO ===== -->
+    <section class="section section--loose catalog" aria-labelledby="catalog-title" data-js="catalog">
+      <div class="container catalog__container">
+
+        <header class="catalog__header">
+          <h2 id="catalog-title" class="catalog__title">Productos disponibles</h2>
+          <p class="catalog__description">
+            Elige el equipo que mejor se adapta a tus necesidades.
+          </p>
+        </header>
+
+        <div class="catalog__grid" data-js="catalog-grid">
+
+          <!-- USO DIARIO -->
+          <!-- USO DIARIO -->
+          <article class="card product-card" data-js="product-card" data-category="diario"
+            data-title="Redmi 14C"
+            data-price="$3,299"
+            data-screen="6.71'' LCD 90Hz"
+            data-cpu="MediaTek Helio G36"
+            data-ram="4 GB"
+            data-rom="128 GB"
+            data-battery="5000 mAh"
+            data-cooling="Pasiva"
+            data-os="Android">
+            <span class="product-card__badge">USO DIARIO</span>
+            <h3 class="product-card__title">Redmi 14C</h3>
+            <p class="product-card__price">$3,299</p>
+            <p class="product-card__text">
+              Ideal para comunicación básica y uso cotidiano.
+            </p>
+            <div class="product-card__actions">
+              <button class="button button--primary is-interactive" data-js="product-action">Ver</button>
+            </div>
+          </article>
+
+          <!-- TRABAJO -->
+          <!-- TRABAJO -->
+          <article class="card product-card" data-js="product-card" data-category="trabajo"
+            data-title="Motorola G54"
+            data-price="$6,799"
+            data-screen="6.5'' IPS LCD 120Hz"
+            data-cpu="MediaTek Dimensity 7020"
+            data-ram="8 GB"
+            data-rom="256 GB"
+            data-battery="5000 mAh"
+            data-cooling="Pasiva"
+            data-os="Android">
+            <span class="product-card__badge">TRABAJO</span>
+            <h3 class="product-card__title">Motorola G54</h3>
+            <p class="product-card__price">$6,799</p>
+            <p class="product-card__text">
+              Equilibrio entre rendimiento, batería y confiabilidad.
+            </p>
+            <div class="product-card__actions">
+              <button class="button button--primary is-interactive" data-js="product-action">Ver</button>
+            </div>
+          </article>
+
+          <!-- GAMER -->
+          <!-- GAMER -->
+          <article class="card product-card" data-js="product-card" data-category="gamer"
+            data-title="Infinix Hot 60 Pro"
+            data-price="$4,299"
+            data-screen="6.78'' LCD 120Hz"
+            data-cpu="MediaTek Helio G88"
+            data-ram="8 GB"
+            data-rom="128 GB"
+            data-battery="5000 mAh"
+            data-cooling="Pasiva"
+            data-os="Android">
+            <span class="product-card__badge">GAMER</span>
+            <h3 class="product-card__title">Infinix Hot 60 Pro</h3>
+            <p class="product-card__price">$4,299</p>
+            <p class="product-card__text">
+              Buen desempeño gráfico para juegos populares.
+            </p>
+            <div class="product-card__actions">
+              <button class="button button--primary is-interactive" data-js="product-action">Ver</button>
+            </div>
+          </article>
+
+          <!-- TRABAJO -->
+          <!-- TRABAJO -->
+          <article class="card product-card" data-js="product-card" data-category="trabajo"
+            data-title="Apple iPhone SE (3ª gen)"
+            data-price="$12,999"
+            data-screen="4.7'' Retina HD"
+            data-cpu="Apple A15 Bionic"
+            data-ram="4 GB"
+            data-rom="128 GB"
+            data-battery="2018 mAh"
+            data-cooling="Pasiva"
+            data-os="iOS">
+            <span class="product-card__badge">TRABAJO</span>
+            <h3 class="product-card__title">Apple iPhone SE (3ª gen)</h3>
+            <p class="product-card__price">$12,999</p>
+            <p class="product-card__text">
+              Rendimiento premium en un formato compacto y seguro.
+            </p>
+            <div class="product-card__actions">
+              <button class="button button--primary is-interactive" data-js="product-action">Ver</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__copy">© 2026 WMP. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+    <!-- ===== MODAL PRODUCTO ===== -->
+  <!--
+    Modal reutilizable para mostrar información detallada del producto.
+    ⚠️ IMPORTANTE:
+    - NO cambiar data-attributes (JS depende de ellos)
+    - Estructura pensada para diseño premium + scroll interno
+    - Preparado para imágenes dinámicas por producto
+  -->
+  <div class="modal" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- Overlay para cerrar modal al hacer click fuera -->
+    <div class="modal__overlay" data-modal-close></div>
+
+    <!-- Contenedor principal del modal -->
+    <div class="modal__dialog">
+
+      <!-- ===== HEADER FIJO ===== -->
+      <!-- Mantiene título y botón cerrar siempre visibles -->
+      <header class="modal__header">
+        <h3 class="modal__title" data-modal-title>Nombre del producto</h3>
+        <button class="modal__close" data-modal-close aria-label="Cerrar">×</button>
+      </header>
+
+      <!-- ===== CUERPO SCROLLEABLE ===== -->
+      <!-- Aquí vive todo el contenido largo del modal -->
+      <div class="modal__body">
+
+        <!-- ===== IMAGEN DEL PRODUCTO ===== -->
+        <!-- Preparado para cargar imágenes dinámicamente desde JS -->
+        <section class="modal__media" aria-label="Imagen del producto">
+          <figure class="modal__media-frame">
+            <img class="modal__image" data-modal-image src="" alt="Imagen del producto" />
+          </figure>
+        </section>
+
+        <!-- ===== RESUMEN RÁPIDO ===== -->
+        <!-- Precio destacado para jerarquía visual -->
+        <section class="modal__summary">
+          <p class="modal__price" data-modal-price>$0,000</p>
+        </section>
+
+        <!-- ===== ESPECIFICACIONES TÉCNICAS ===== -->
+        <!-- Listado claro, escaneable y semántico -->
+        <section class="modal__specs" aria-labelledby="modal-specs-title">
+          <h4 id="modal-specs-title" class="modal__section-title">Especificaciones</h4>
+
+          <div class="modal__spec">
+            <div class="modal__spec-label">Pantalla</div>
+            <div class="modal__spec-value" data-modal-screen></div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Procesador</div>
+            <div class="modal__spec-value" data-modal-cpu></div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Memoria RAM</div>
+            <div class="modal__spec-value" data-modal-ram></div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Almacenamiento</div>
+            <div class="modal__spec-value" data-modal-rom></div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Batería</div>
+            <div class="modal__spec-value" data-modal-battery></div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Refrigeración</div>
+            <div class="modal__spec-value" data-modal-cooling></div>
+          </div>
+          <div class="modal__spec">
+            <div class="modal__spec-label">Sistema</div>
+            <div class="modal__spec-value" data-modal-os></div>
+          </div>
+        </section>
+
+        <!-- ===== INFORMACIÓN EDUCATIVA ===== -->
+        <!-- Ayuda al usuario a entender cada especificación -->
+        <section class="modal__info" aria-labelledby="modal-info-title">
+          <h4 id="modal-info-title" class="modal__section-title">¿Qué significa esto?</h4>
+          <p class="modal__info-text"><strong>Pantalla:</strong> Define qué tan nítida y fluida se ve la imagen.</p>
+          <p class="modal__info-text"><strong>Procesador:</strong> Es el cerebro del equipo; más potencia = mayor rapidez.</p>
+          <p class="modal__info-text"><strong>RAM:</strong> Permite usar varias apps sin que el teléfono se alente.</p>
+          <p class="modal__info-text"><strong>Almacenamiento:</strong> Espacio para fotos, videos y aplicaciones.</p>
+          <p class="modal__info-text"><strong>Batería:</strong> Indica cuánto tiempo puedes usarlo sin cargar.</p>
+          <p class="modal__info-text"><strong>Refrigeración:</strong> Evita el sobrecalentamiento en uso intenso.</p>
+          <p class="modal__info-text"><strong>Sistema:</strong> Plataforma que determina compatibilidad y seguridad.</p>
+        </section>
+
+      </div>
+
+      <!-- ===== ACCIONES FIJAS ===== -->
+      <!-- Siempre visibles, incluso con scroll largo -->
+      <footer class="modal__actions">
+        <button class="button button--primary">Solicitar</button>
+        <button class="button button--ghost" data-modal-close>Cerrar</button>
+      </footer>
+
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/main.js"></script>
+
+</body>
+</html>
+
+
