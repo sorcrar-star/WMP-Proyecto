@@ -260,11 +260,15 @@
   - Contiene el contenido largo
   - Permite scroll interno elegante
   - Mantiene header y acciones siempre visibles
+  - Define ritmo vertical entre secciones
 */
 .modal__body {
   padding: var(--space-xxl);
   overflow-y: auto;
   overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxl); /* ← CLAVE: evita contenido amontonado */
 
   /* Scroll premium (WebKit) */
   scrollbar-width: thin; /* Firefox */
@@ -287,7 +291,6 @@
 .modal__body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255,255,255,0.28);
 }
-
 
 /* -------- Imagen del producto -------- */
 /*
@@ -754,4 +757,3 @@ img {
     margin-bottom: var(--space-lg);
   }
 }
-
